@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>{{BETA_NAME}} {{BETA_VERSION}}</title>
+<style type="text/css">
+body {background:#fff;margin:0;padding:0;font-family:arial,helvetica,sans-serif;text-align:center;padding:10px;color:#333;font-size:16px;}
+#container {width:300px;margin:0 auto;}
+h1 {margin:0;padding:0;font-size:14px;}
+p {font-size:13px;}
+.link {background:#ecf5ff;border-top:1px solid #fff;border:1px solid #dfebf8;margin-top:.5em;padding:.3em;}
+.link a {text-decoration:none;font-size:15px;display:block;color:#069;}
+.last_updated {font-size: x-small;text-align: right;font-style: italic;}
+.created_with {font-size: x-small;text-align: center;}
+.vi {display: visible}
+.hi {display: none}
+</style>
+</head>
+<body>
+
+<div id="container">
+
+
+<p><img src='{{BETA_ICON}}' length='57' width='57' /></p>
+
+<div class="link"><a href="itms-services://?action=download-manifest&url={{BETA_PLIST}}">Tap Here to Install<br />{{BETA_NAME}} {{BETA_VERSION}}<br />Directly On Your Device</a></div>
+<div class="{{SERVER_CA_EXIST}}">
+<h1>if you did not install the CA certification, please download from link below, then set to trust list in iPhone: Setting->General->About->Certificate Trust Setting</h1>
+<h1>
+<a title="iPhone" href="{{SERVER_CA}}">Click browse detail and set to trust in next alert. Tap Here to Install ssl Cer</a>
+<h1/>
+</div>
+<div  class="{{SERVER_CA_NOT_EXIST}}">
+<h1>note:Server did not deploy a CA certification</h1>
+</div>
+
+<p><strong>Link didn't work?</strong><br />
+Make sure you're visiting this page on your device, not your computer.</p>
+
+
+<p>These files can then be used to install the beta via iTunes.</p>
+
+<p class="last_updated">Last Updated: {{BETA_DATE}}</p>
+
+</div>
+
+</body>
+</html>
